@@ -14,12 +14,12 @@ logging.basicConfig(
 )
 
 # variables
-API_ID = ""
-API_HASH = ""
-BOT_TOKEN = ""
-SESSION = ""
+API_ID = 
+API_HASH = 
+BOT_TOKEN = 
+SESSION = 
 FORCESUB = "Unknown_Cinema"
-AUTH = ""
+AUTH = 
 
 bot = TelegramClient("bot", API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
