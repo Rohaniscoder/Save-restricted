@@ -1,4 +1,4 @@
-# Github.com/Vasusen-code
+from os import environ
 
 import logging
 import sys
@@ -14,12 +14,12 @@ logging.basicConfig(
 )
 
 # variables
-API_ID = ''
-API_HASH = ""
-BOT_TOKEN = ""
-SESSION = ""
+API_ID = int(environ['API_ID'])
+API_HASH = environ['API_HASH']
+BOT_TOKEN = environ['BOT_TOKEN']
+SESSION = environ['SESSION']
 FORCESUB = "O_W_B"
-AUTH = ''
+AUTH = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 
 bot = TelegramClient("bot", API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
